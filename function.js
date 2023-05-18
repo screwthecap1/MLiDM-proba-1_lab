@@ -76,35 +76,35 @@ function symmetricAddArr(arr1, arr2) {
 function Main ()
 {
     // получение данных с формы
-    let arr1 = document.getElementById('arr1').value;
-    let arr2 =document.getElementById('arr2').value;
+    let mas1 = document.getElementById('mas1').value;
+    let mas2 = document.getElementById('mas2').value;
 
     // создание массивов
     arr1 = arr1.split(' ');
     arr2 = arr2.split(' ');
 
     // валидация элементов массивов
-    let message1 = "";
+    let mess1 = "";
     for (let i = 0; i < arr1.length; i++)
     {
         if (!validateArr(arr1[i]))
         {
-            message1 += "Ошибка в "+ (i + 1) + " элементе ";
+            mess1 += "Ошибка в "+ (i + 1) + " элементе ";
         }
     }
-    document.getElementById("val1").innerHTML = message1;
+    document.getElementById("val1").innerHTML = mess1;
 
-    let message2 = "";
+    let mess2 = "";
     for (let i = 0; i < arr2.length; i++)
     {
         if (!validateArr(arr2[i]))
         {
-            message2 += "Ошибка в "+ (i + 1) + " элементе ";
+            mess2 += "Ошибка в "+ (i + 1) + " элементе ";
         }
     }
-    document.getElementById("val2").innerHTML = message2;
+    document.getElementById("val2").innerHTML = mess2;
 
-    if (message1 == "" && message2 == "") {
+    if (mess1 == "" && mess2 == "") {
         unionArr(arr1, arr2);
         intersectionArr(arr1, arr2);
         additionArr(arr1, arr2);
